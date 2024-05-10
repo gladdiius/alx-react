@@ -3,26 +3,31 @@ header .App-header{
     align-items: center;
     margin: 0;
     border-bottom: 3px hsl(9, 87%, 49%) solid;
-}
-
-header .App-header h1{
+    margin-bottom: 30px;
+  }
+  
+  header .App-header h1{
     color:hsl(9, 87%, 49%);
-}
-
-.hol_logo{
+  }
+  
+  .hol_logo{
     height: 100px;
     width: 100px;
-}
-
-body{
+  }
+  
+  body{
     font-family: Arial, Helvetica, sans-serif;
     height: 70vh;
     font-weight: 100px;
     margin: 0;
-}
-
-.App-footer{
+  }
+  
+  .App-footer{
     text-align: center;
     font-style: italic;
     border-top: 3px hsl(9, 87%, 49%) solid;
-}
+  }
+  
+  body .App-body{
+    margin-left: 30px;
+  }
