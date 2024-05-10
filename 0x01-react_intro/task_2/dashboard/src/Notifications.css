@@ -1,0 +1,51 @@
+header .App-header{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border-bottom: 3px hsl(9, 87%, 49%) solid;
+    margin-bottom: 30px;
+  }
+  
+  header .App-header h1{
+    color:hsl(9, 87%, 49%);
+  }
+  
+  .hol_logo{
+    height: 100px;
+    width: 100px;
+  }
+  
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 70vh;
+    font-weight: 100px;
+    margin: 0;
+  }
+  
+  .App-footer{
+    text-align: center;
+    font-style: italic;
+    border-top: 3px hsl(9, 87%, 49%) solid;
+  }
+  
+  body .App-body{
+    margin-left: 30px;
+  }
+  
+  .closeImage{
+    width: 10px;
+    height: 10px; 
+  }
+  
+  li:nth-child(1) {
+    color: blue;
+  }
+  
+  li:nth-child(2) {
+    color: red;
+  }
+  
+  li:nth-child(3) {
+    color: red;
+  }
+  
