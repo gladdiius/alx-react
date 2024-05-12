@@ -1,22 +1,34 @@
-const path = require('path');
-
 module.exports = {
-  mode: 'production', // Set Webpack mode to production
-  entry: './js/dashboard_main.js', // Entry point of your application
+  mode: 'production',
+  entry: './task_2/js/dashboard_main.js',
   output: {
-    path: path.resolve(__dirname, 'public'), // Output directory
-    filename: 'bundle.js', // Output filename
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'public'),
   },
   module: {
-    rules: [
-        {
-            test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        },
-        {
-            test: /\.(png|jpe?g|gif)$/i,
-            type: 'asset/resource',
-        },
-    ],
-},
+      rules: [
+          {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: {
+                  loader: 'babel-loader',
+                  options: {
+                      presets: ['@babel/preset-env'],
+                  },
+              },
+          },
+          {
+              test: /\.css$/,
+              use: ['style-loader', 'css-loader'],
+          },
+          {
+              test: /\.(png|jpe?g|gif)$/i,
+              use: [
+                  {
+                      loader: 'file-loader',
+                  },
+              ],
+          },
+      ],
+  },
 };
