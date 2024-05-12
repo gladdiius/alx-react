@@ -19,6 +19,6 @@
     "lodash": "^4.17.21",
     "style-loader": "^4.0.0",
     "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
+    "webpack-cli": "^5.1.4"
   }
 }
