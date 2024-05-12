@@ -1,1 +1,0 @@
-this folder contains all the solution for alx react intro project
