@@ -1,0 +1,22 @@
+.Notifications{
+  border: 2px dashed black ;
+  padding: 5px;
+}
+  
+  .closeImage{
+    width: 13px;
+    height: 13px; 
+  }
+  
+  li:nth-child(1) {
+    color: blue;
+  }
+  
+  li:nth-child(2) {
+    color: red;
+  }
+  
+  li:nth-child(3) {
+    color: red;
+  }
+  
