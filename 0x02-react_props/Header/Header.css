@@ -1,0 +1,11 @@
+header .App-header{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border-bottom: 3px hsl(9, 87%, 49%) solid;
+    margin-bottom: 30px;
+  }
+  
+  header .App-header h1{
+    color:hsl(9, 87%, 49%);
+  }

@@ -1,0 +1,21 @@
+body .App-body{
+    margin-left: 30px;
+  }
+  
+  .closeImage{
+    width: 10px;
+    height: 10px; 
+  }
+  
+  li:nth-child(1) {
+    color: blue;
+  }
+  
+  li:nth-child(2) {
+    color: red;
+  }
+  
+  li:nth-child(3) {
+    color: red;
+  }
+  
