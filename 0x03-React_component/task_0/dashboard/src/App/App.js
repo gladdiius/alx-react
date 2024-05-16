@@ -1,63 +1,48 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './App.css';
-import Notifications from './Notifications'; 
-import Header from './Header';
-import Footer from './Footer';
-import Login from './Login';
-import CourseList from './CourseList';
+import React from "react";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Login from "../Login/Login";
+import CourseList from "../CourseList/CourseList";
+import Notifications from "../Notifications/Notifications";
+import "./App.css";
+import PropTypes from "prop-types";
+import { getLatestNotification } from "../utils/utils";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+class App extends React.Component {
+  listCourses = [
+    { id: 1, name: "ES6", credit: 60 },
+    { id: 2, name: "Webpack", credit: 20 },
+    { id: 3, name: "React", credit: 40 },
+  ];
 
-    this.state = {
-      loggedIn: this.props.isLoggedIn,
-      listNotifications: [
-        { id: 1, type: 'default', html: { __html: '<u>Test Notification 1</u>' }, value: 'Test Notification 1' },
-        { id: 2, type: 'urgent', html: { __html: '<u>Test Notification 2</u>' }, value: 'Test Notification 2' },
-      ],
-    };
-  }
-
-  handleLabelClick = (inputId) => {
-    const inputElement = document.getElementById(inputId);
-    if (inputElement) {
-      inputElement.focus();
-    }
-  };
+  listNotifications = [
+    { id: 1, type: "default", value: "New course available" },
+    { id: 2, type: "urgent", value: "New resume available" },
+    { id: 3, type: "urgent", html: getLatestNotification() },
+  ];
 
   render() {
-    const { loggedIn, listNotifications } = this.state;
-
-    const listCourses = [
-      { id: 1, name: 'ES6', credit: 60 },
-      { id: 2, name: 'Webpack', credit: 20 },
-      { id: 3, name: 'React', credit: 40 }
-    ];
-
     return (
-      <>
-        <div className='header-wrapper'>
-          <Header />
-          <Notifications displayDrawer={true} listNotifications={listNotifications} />
+      <React.Fragment>
+        <div className="App">
+          <div className="heading-section">
+            <Notifications listNotifications={this.listNotifications} />
+            <Header />
+          </div>
+          {this.props.isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login />}
+          <Footer />
         </div>
-        {loggedIn ? (
-          <CourseList listCourses={listCourses} />
-        ) : (
-          <Login />
-        )}
-        <Footer />
-      </>
+      </React.Fragment>
     );
   }
 }
+
+App.defaultProps = {
+  isLoggedIn: false,
+};
 
 App.propTypes = {
   isLoggedIn: PropTypes.bool,
 };
 
-App.defaultProps = {
-  isLoggedIn: false,
-};
 export default App;
