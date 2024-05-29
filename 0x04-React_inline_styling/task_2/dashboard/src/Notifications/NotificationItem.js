@@ -7,7 +7,6 @@ function NotificationItem({ type, html, value }) {
     notificationItem: {
       color: type === 'urgent' ? 'red' : 'black',
       fontStyle: type === 'urgent' ? 'italic' : 'normal',
-      // Add more styles as needed
     }
   });
 

@@ -1,67 +1,33 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
-
+import './Login.css'
+import {StyleSheet, css} from 'aphrodite'
 function LoginForm({ handleLabelClick }) {
   return (
-    <div className={css(styles.appBody)}>
+    <>
+    <div className={css(style.AppBody)}>
       <p>Login to access the full dashboard</p>
-      <div className={css(styles.form)}>
-        <div className={css(styles.inputGroup)}>
-          <label
-            htmlFor="email"
-            onClick={() => handleLabelClick('email')}
-            className={css(styles.label)}
-          >
-            Email:
-          </label>
-          <input id="email" type="text" className={css(styles.input)} />
+
+      <div className='form' style={{ display: 'flex', flexDirection: 'row' }}>
+        <div style={{ marginRight: '10px' }}>
+          <label htmlFor="email" onClick={() => handleLabelClick('email')}>Email:</label>
+          <input id="email" type='text' />
         </div>
-        <div className={css(styles.inputGroup)}>
-          <label
-            htmlFor="password"
-            onClick={() => handleLabelClick('password')}
-            className={css(styles.label)}
-          >
-            Password:
-          </label>
-          <input id="password" type="text" className={css(styles.input)} />
+
+        <div style={{ marginRight: '10px' }}>
+          <label htmlFor="password" onClick={() => handleLabelClick('password')}>Password:</label>
+          <input id="password" type='text' />
         </div>
       </div>
     </div>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  appBody: {
+const style = StyleSheet.create({
+  AppBody:{
     marginLeft: '30px',
-    height: '70vh',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  inputGroup: {
-    marginRight: '10px',
-  },
-  label: {
-    cursor: 'pointer',
-  },
-  input: {
-    display: 'block',
-  },
-  closeImage: {
-    width: '10px',
-    height: '10px',
-  },
-  nthChild1: {
-    color: 'blue',
-  },
-  nthChild2: {
-    color: 'red',
-  },
-  nthChild3: {
-    color: 'red',
-  },
-});
+    height: '70vh'
+  }
+})
 
 export default LoginForm;
