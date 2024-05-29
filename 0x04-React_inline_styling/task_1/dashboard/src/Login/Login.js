@@ -1,5 +1,4 @@
 import React from 'react';
-import './Login.css'
 import {StyleSheet, css} from 'aphrodite'
 function LoginForm({ handleLabelClick }) {
   return (
