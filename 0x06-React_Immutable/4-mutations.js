@@ -11,6 +11,6 @@ export const map = Map({
 });
 
 // Update values in the original map to create a new map
-export const map2 = map.withMutations(m => {
+export const map2 = map.withMutations((m) => {
   m.set(2, 'Benjamin').set(4, 'Oliver');
 });
