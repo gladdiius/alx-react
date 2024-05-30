@@ -1,5 +1,6 @@
 import { Map } from 'immutable';
 
+// Create an Immutable Map with initial values
 export const map = Map({
   1: 'Liam',
   2: 'Noah',
@@ -9,6 +10,7 @@ export const map = Map({
   6: 'Lucas',
 });
 
-export const map2 = map
-  .set(2, 'Benjamin')
-  .set(4, 'Oliver');
+// Update values in the original map to create a new map
+export const map2 = map.withMutations(m => {
+  m.set(2, 'Benjamin').set(4, 'Oliver');
+});
