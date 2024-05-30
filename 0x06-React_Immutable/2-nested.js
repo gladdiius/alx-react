@@ -1,4 +1,6 @@
+import { Map } from 'immutable';
+
 export default function accessImmutableObject(object, array) {
-  return array.reduce((result, key) => ((result && result[key] !== undefined)
-    ? result[key] : undefined), object);
+  const immutableObject = Map(object);
+  return immutableObject.getIn(array, undefined);
 }
