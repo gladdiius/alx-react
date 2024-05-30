@@ -1,5 +1,11 @@
 export default function accessImmutableObject(object, array) {
-  return array.reduce((acc, key) => (
-    (acc && acc[key] !== undefined) ? acc[key] : undefined
-  ), object);
+  let result = object;
+  for (const key of array) {
+    if (result[key] !== undefined) {
+      result = result[key];
+    } else {
+      return undefined;
+    }
+  }
+  return result;
 }
