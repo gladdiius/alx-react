@@ -1,4 +1,4 @@
-const { fromJS } = require('immutable');
+import { fromJS } from 'immutable';
 
 /**
  * Converts a plain JavaScript object into an Immutable Map.
