@@ -17,4 +17,20 @@ describe('uiActionCreators', () => {
     const expectedAction = {
       type: LOGOUT
     };
-    expect(logout()).to
+    expect(logout()).toEqual(expectedAction);
+  });
+
+  it('displayNotificationDrawer should create an action to display the notification drawer', () => {
+    const expectedAction = {
+      type: DISPLAY_NOTIFICATION_DRAWER
+    };
+    expect(displayNotificationDrawer()).toEqual(expectedAction);
+  });
+
+  it('hideNotificationDrawer should create an action to hide the notification drawer', () => {
+    const expectedAction = {
+      type: HIDE_NOTIFICATION_DRAWER
+    };
+    expect(hideNotificationDrawer()).toEqual(expectedAction);
+  });
+});
