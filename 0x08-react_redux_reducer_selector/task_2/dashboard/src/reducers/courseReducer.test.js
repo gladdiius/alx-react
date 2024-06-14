@@ -1,5 +1,3 @@
-// task_4/src/reducers/courseReducer.test.js
-
 import courseReducer from './courseReducer';
 import {
   FETCH_COURSE_SUCCESS,
