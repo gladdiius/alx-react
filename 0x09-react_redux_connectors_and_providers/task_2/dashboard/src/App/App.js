@@ -25,7 +25,8 @@ class App extends Component {
   handleKeyDown = (event) => {
     if (event.ctrlKey && event.key === 'h') {
       alert('Logging you out');
-      this.props.logout(); // Example logout action from previous setup, adjust as needed
+      // Example logout action from previous setup, adjust as needed
+      // this.props.logout();
     }
   };
 
